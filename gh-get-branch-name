@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 
-exec gh pr view $1 --json headRefName --jq '.headRefName' 2> /dev/null
+exec gh pr view --json headRefName --jq .headRefName $1 2> /dev/null
